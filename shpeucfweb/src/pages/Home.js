@@ -1,12 +1,14 @@
-import React, {  } from 'react';
-import About from './About';
-import Membership from './Membership';
-import Linktree from './Linktree';
+import React from 'react';
+// import About from './About';
+// import Membership from './Membership';
+// import Linktree from './Linktree';
+import Nav from '../components/Nav';
 
 function Home() {
 
     return (
         <div>
+            <Nav />
             <h1>Home page</h1>
             <div className="container">
                 <p>welcome to the shpe ucf website</p>
@@ -24,10 +26,6 @@ function Home() {
             <div className="footer"> 
                 <h3>footer</h3>
             </div>
-
-            <About />
-            <Membership />
-            <Linktree />
         </div>
     );
 }
