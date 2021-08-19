@@ -1,8 +1,10 @@
 import React from 'react';
+import Nav from '../components/Nav';
 
 function About() {
     return (
         <div>
+            <Nav />
             <h1>About page</h1>
             <div className="description">
                <h2>shpe founding</h2>

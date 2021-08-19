@@ -1,7 +1,4 @@
 import React from 'react';
-// import About from './About';
-// import Membership from './Membership';
-// import Linktree from './Linktree';
 import Nav from '../components/Nav';
 
 function Home() {
