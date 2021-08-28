@@ -1,0 +1,19 @@
+.Link {
+    /* style={{margin: "1vh", fontSize: "3vh"}}  */
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    margin: 1vh;
+}
+
+.Link:hover {
+    color: #f7d410;
+}
+
+.Navbar {
+    padding: 1vh;
+}
+
+.container {
+    display: flex;
+}

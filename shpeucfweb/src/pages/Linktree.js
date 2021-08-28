@@ -1,17 +1,12 @@
-import React from 'react';
-import Nav from '../components/Nav';
+import React, { useEffect } from 'react';
 
 function Linktree() {
-
-    return (
-        <div>
-            <Nav />
-            <h1>Linktree page</h1>
-            <div className="links">
-                <p>redirects to linktree</p>
-            </div>
-        </div>
-    );
+    // every time the page is loaded useEffect will redirect user to url linked
+    useEffect(() => {
+        window.location.href = "https://linktr.ee/shpeucf";
+    }, []);
+    
+    return(null);
 }
 
 export default Linktree;
