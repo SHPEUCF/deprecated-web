@@ -1,12 +1,13 @@
 import React from 'react';
-
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 
 var ProfileCard = (person) => {
     return (
-        <Grid >
+        <Grid item>
             <Card>
                 <Typography>
                     {person.name}
@@ -30,13 +31,13 @@ var BoardList = ({ people }) => {
     ));
 
     return (
-        <Grid container>
+        <Grid container spacing={4}>
             {cards}
         </Grid>
     )
 }
 
-var people = [
+const people = [
     {name: 'Jazmine Manriquez', role: 'President'},
     {name: 'Frederick Santiago', role: 'External Vice President'},
     {name: 'Gabriela Medina', role: 'Internal Vice President'},

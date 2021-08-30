@@ -79,18 +79,18 @@ function Home() {
                 <img style={{height: '50%', width: '50%'}} src={TablingShpe} alt='oh no'/>
             </div> */}
             
-            <div style={{display:'flex', margin: '1vh'}}>
-                <div className="container" style={{flexDirection: 'column', alignItems: 'center'}}>
+            <div style={{display:'flex', margin: '1vh', justifyContent: 'center', alignContent: 'center'}}>
+                <div className="container" style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                     <h2 style={{margin: '0'}}>Welcome to the SHPE UCF Website</h2>
-                    <p style={{marginTop: '1vh'}}>
+                    <p style={{marginTop: '1vh', maxWidth: '90vh'}}>
                         Welcome to Society of Hispanic Professional Engineers UCF Chapter, and the beginning of your success as a future leader. Here you will find information about our chapter, SHPE National Conference, and our future events. Please  browse our site and if you have any questions, don’t hesitate on contacting us via our Contact Us page. We are here for you!
                     </p>
                     <h2 style={{margin: '0'}}>Why join <span  className="ShpeKnighs">SHPE UCF?</span></h2>
-                    <p style={{marginTop: '1vh'}}>
+                    <p style={{marginTop: '1vh', maxWidth: '90vh'}}>
                         Simply because of all the invaluable knowledge, great friends, and unforgettable memories that you will have!
                     </p>
                     <h2 style={{margin: '0'}}>What we offer</h2>
-                    <p style={{marginTop: '1vh'}}>
+                    <p style={{marginTop: '1vh', maxWidth: '90vh'}}>
                         The opportunity to prepare yourself as a professional that no classroom setting does. You will have access to everything from professional and leadership workshops, scholarships, internships, networking opportunities with fellow engineering students from the professional chapter and industry leaders at a local and national level!
                     </p>
                 </div>
@@ -140,9 +140,9 @@ function Home() {
             </div>
             <div 
                 className='Conferences' 
-                style={{display: 'flex', flexDirection: 'column', justifyContent:'center', alignContent: 'center', margin: '1vh'}}>
+                style={{display: 'flex', flexDirection: 'column', justifyItems:'center', alignItems: 'center', margin: '1vh'}}>
                 <h2>Conference</h2>
-                <p>
+                <p style={{maxWidth: '110vh'}}>
                     Additionally SHPE offers all of it’s members with various opportunities to meet other engineers and members of the community through some of the conferences we participate in yearly. Want to be a partaker in our society, meet professionals in the field, build your resume, and many other things that will ensure your success in the future?
                     Make sure to come with us to these conferences.
                 </p>

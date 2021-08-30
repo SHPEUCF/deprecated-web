@@ -15,7 +15,7 @@ function Nav() {
     
         return(
         <div className='contianer'>
-            <AppBar className='Navbar' position='static' style={{display: 'flex', flexDirection: 'row', background: 'black', justifyContent: 'flex-start', alignContent: 'center'}}>
+            <AppBar className='Navbar' position='static' style={{display: 'flex', flexDirection: 'row', background: 'black', justifyContent: 'flex-start', alignItems: 'center'}}>
                 <img style={{height: '3%', width: '3%'}} src={logo} alt='logo'/>
                 {routes.map((route, index) => (
                     <div key={index}>
