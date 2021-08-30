@@ -9,7 +9,8 @@ import { BrowserRouter as
   import Membership from './pages/Membership';
   import Linktree from './pages/Linktree';
   import Nav from './components/Nav';
-  
+  import Footer from './components/Footer';
+
 const App = () => {
   return (
     // router set up 
@@ -31,6 +32,7 @@ const App = () => {
             <Linktree />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

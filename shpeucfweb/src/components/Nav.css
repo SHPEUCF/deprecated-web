@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300&display=swap');
+
 .Link {
     /* style={{margin: "1vh", fontSize: "3vh"}}  */
     text-decoration: none;
     color: white;
-    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
     margin: 1vh;
 }
 
