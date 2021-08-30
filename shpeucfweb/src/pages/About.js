@@ -17,7 +17,7 @@ var ProfileCard = (person) => {
                     {person.role}
                 </Typography>
                 <CardMedia
-                    style={{ height: 0, paddingTop: '56.25%' }}
+                    style={{ height: '15vh'}}
                     image="https://www.pbs.org/wnet/nature/files/2020/06/Nature-Thumbnails-Template-2020AS-1280x720.png"
                 />
             </Card>
