@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
+import Footer from '../components/Footer';
 
 var ProfileCard = (person) => {
     return (
@@ -98,7 +99,7 @@ function About() {
                 <h2>2021-2022 Board</h2>
                 <BoardList people={people} />
             </div>
-
+            <Footer />
         </div>
     );
 }

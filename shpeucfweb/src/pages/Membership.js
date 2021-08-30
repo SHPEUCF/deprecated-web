@@ -1,16 +1,12 @@
-import React, {  } from 'react';
+import React, { useEffect } from 'react';
 
 function Membership() {
-    // useEffect(() => {
-    //     window.location.href = "https://linktr.ee/shpeucf";
-    // }, []);
+    useEffect(() => {
+        window.location.href = "https://form.jotform.com/70387424224151";
+    }, []);
+
     return (
-        <div>
-            <h1>membership page</h1>
-            <div className="form">
-                <button onClick={() => {window.location.href = "https://form.jotform.com/jsform/70387424224151"}}>Jotform</button>
-            </div>
-        </div>
+        null
     );
 }
 

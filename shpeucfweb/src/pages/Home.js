@@ -20,6 +20,7 @@ import wobJaz from '../assets/wobJaz.JPG';
 import wobMembers from '../assets/wobMembers.JPG';
 import henaac from '../assets/henaac.jpg';
 import shpeConference from '../assets/shpeConference.png';
+import Footer from '../components/Footer';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -40,14 +41,7 @@ function Home() {
         imgUrl: shpeConference
     }
     ];
-
-    const images = [
-        wobBoard,
-        wobJaz,
-        wobMembers,
-        TablingShpe
-    ];
-
+    const images = [wobBoard, wobJaz, wobMembers, TablingShpe];
     const theme = useTheme();
     const [activeStep, setActiveStep] = useState(0);
     const maxSteps = images.length;
@@ -75,9 +69,6 @@ function Home() {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column'}}>
-            {/* <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
-                <img style={{height: '50%', width: '50%'}} src={TablingShpe} alt='oh no'/>
-            </div> */}
             
             <div style={{display:'flex', margin: '1vh', justifyContent: 'center', alignContent: 'center'}}>
                 <div className="container" style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
@@ -96,7 +87,8 @@ function Home() {
                 </div>
                 
                 {/* used material ui implementation of a stepper and modified it  */}
-                <div style={{flexDirection: 'column', width: '50vh'}}>
+                {/* make this into a separate component */}
+                <div style={{flexDirection: 'column', width: '50vh', display: 'flex', justifyContent: 'center', alignContent: 'center', marginLeft: '1vh'}}>
                     <AutoPlaySwipeableViews
                         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                         index={activeStep}
@@ -147,6 +139,7 @@ function Home() {
                     Make sure to come with us to these conferences.
                 </p>
                 {/* cards displaying conference information goes here */}
+                {/* possibly break up this part here and make this into a separate component */}
                 <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
                     {conferences.map((conference, index) => (
                         <Grid 
@@ -161,7 +154,7 @@ function Home() {
                                     <p>Location: {conference.location}</p>
                                     <p>Date: {conference.date}</p>
                                 </CardContent>
-                            </Card>  
+                            </Card>
                             <div className='dialog'>
                                 <Dialog
                                     open={open}
@@ -183,7 +176,7 @@ function Home() {
                     ))}
                 </div>
             </div>
-            
+            <Footer />
         </div>
     );
 }
