@@ -17,35 +17,19 @@ import HernanH from '../assets/board/HernanH.jpg';
 import BryceV from '../assets/board/BryceV.png'
 import StephC from '../assets/board/StephC.jpeg';
 
-// const ProfileCard = (person) => {
-//     return (
-//         <Card style={{margin: '1vh', width: '30vh'}}>
-//             <Typography variant='h6' style={{fontWeight: 'bold'}}>
-//                 {person.name}
-//             </Typography>
-//             <Typography>
-//                 {person.role}
-//             </Typography>
-//             <CardMedia
-//                 style={{ height: '15vh'}}
-//                 image="https://www.pbs.org/wnet/nature/files/2020/06/Nature-Thumbnails-Template-2020AS-1280x720.png"
-//             />
-//         </Card>
-//     )
-// }
-
 const ProfileCard = (person) => {
     return (
         <Grid item>
+            {/* <Card style={{margin: '2vh', padding: '.5vh'}}> */}
             <Card>
                 <CardMedia
-                    style={{ height: "30vh", width: "23vh" }}
+                    style={{ height: '30vh', width: '23vh' }}
                     image={person.image}
                 />
-                <Typography variant="caption">
+                <Typography variant='p' style={{fontWeight: 'bold'}}>
                     {person.name}
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant='body2'>
                     {person.role}
                 </Typography>
             </Card>
@@ -121,7 +105,7 @@ function About() {
             <div className="boardList" style={{ display: 'flex', justifyItems: 'center', flexDirection: 'column', alignItems: 'center' }}>
                 <h2>2021-2022 Board</h2>
                 <div style={{ display: 'flex', alignContent: 'center', flexFlow: 'wrap', justifyContent: 'center', }}>
-                    <Grid container spacing={4}>
+                    <Grid container spacing={8}>
                         {people.map(person => (
                             <ProfileCard name={person.name} role={person.role} image={person.image} />
                         ))}
