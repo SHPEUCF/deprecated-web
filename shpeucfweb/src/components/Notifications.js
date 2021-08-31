@@ -6,7 +6,7 @@ function Notification({isOpen, message}) {
     const [open, setOpen] = useState(true);
 
     const handleClose = (event, reason) => {
-        if (reason == 'clickaway') {
+        if (reason === 'clickaway') {
             return;
         }
 

@@ -8,13 +8,16 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import TablingShpe from '../assets/tablingShpe.JPG';
 import wobBoard from '../assets/wobBoard.JPG';
-import wobJaz from '../assets/wobJaz.JPG';
-import wobMembers from '../assets/wobMembers.JPG';
+import wobJaz from '../assets/Optimized-wobJaz.JPG';
+import wob2020 from '../assets/Optimized-wob2020.JPG';
+import wobBoard2020 from '../assets/Optimized-wobBoard2020.JPG';
+import bbq from '../assets/Optimized-bbq2020.png';
+
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 function Carousel() {
-    const images = [wobBoard, wobJaz, wobMembers, TablingShpe];
+    const images = [wobBoard, wobJaz, wob2020, bbq, wobBoard2020, TablingShpe];
     const theme = useTheme();
     const [activeStep, setActiveStep] = useState(0);
     const maxSteps = images.length;

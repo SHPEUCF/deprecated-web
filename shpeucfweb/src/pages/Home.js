@@ -1,13 +1,8 @@
-import React, {useState} from 'react';
-import Button from '@material-ui/core/Button';
+import React, { } from 'react';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import Grid from '@material-ui/core/Grid';
 import CardContent from '@material-ui/core/CardContent';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import henaac from '../assets/henaac.jpg';
 import shpeConference from '../assets/shpeConference.png';
 import Footer from '../components/Footer';
@@ -32,15 +27,6 @@ function Home() {
         imgUrl: shpeConference,
         url: 'https://www.shpe.org/events/nc2021'
     }];
-    const [open, setOpen] = useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column'}}>
@@ -85,7 +71,6 @@ function Home() {
                             <Card 
                                 key={index} 
                                 style={{maxWidth: '50vh', margin: '1vh', display: 'flex', flexDirection: 'column', justifySelf: 'center', alignSelf: 'center'}} 
-                                onClick={() => handleClickOpen()}
                             >
                                 <CardHeader
                                     title={conference.name}
@@ -96,27 +81,7 @@ function Home() {
                                     <p>Date: {conference.date}</p>
                                 </CardContent>
                             </Card>
-                            <div className='dialog'>
-                                <Dialog
-                                    open={open}
-                                    onClose={handleClose}
-                                >
-                                    <DialogContent>
-                                        <img src={conference.imgUrl} alt={'oh no'}/>
-                                        <DialogContentText>
-                                            {conference.info}
-                                        </DialogContentText>
-                                    </DialogContent>
-                                    <DialogActions>
-                                        <Button color='primary' onClick={() => window.open(conference.url, '_blank')}>
-                                            Learn More
-                                        </Button>
-                                        <Button onClick={handleClose} color="primary">
-                                            Close
-                                        </Button>
-                                    </DialogActions>
-                                </Dialog>
-                            </div>
+                            
                         </Grid>
                     ))}
                 </div>
