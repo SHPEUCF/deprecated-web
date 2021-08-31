@@ -7,7 +7,6 @@ import Linktree from '../pages/Linktree';
 import AppBar from '@material-ui/core/AppBar';
 import './Nav.css';
 import logo from '../assets/shpeLogo.png';
-import Typography from '@material-ui/core/Typography';
 
 function Nav() {
     const routes = [{name: "Home", path:"/", component: <Home />}, {name: "About", path:"/about", component: <About />},
@@ -15,7 +14,7 @@ function Nav() {
     
         return(
         <div className='contianer'>
-            <AppBar className='Navbar' position='static' style={{display: 'flex', flexDirection: 'row', background: 'black', justifyContent: 'flex-start', alignItems: 'center'}}>
+            <AppBar className='Navbar' position='fixed' style={{display: 'flex', flexDirection: 'row', background: 'black', justifyContent: 'flex-start', alignItems: 'center'}}>
                 <img style={{height: '3%', width: '3%'}} src={logo} alt='logo'/>
                 {routes.map((route, index) => (
                     <div key={index}>

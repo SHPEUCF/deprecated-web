@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Notification from '../components/Notifications';
 
 function Membership() {
     useEffect(() => {
@@ -6,7 +7,9 @@ function Membership() {
     }, []);
 
     return (
-        null
+        <div>
+            <Notification message={'Please wait while we redirect to you to our Membership form.'} />
+        </div>
     );
 }
 

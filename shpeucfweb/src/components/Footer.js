@@ -25,19 +25,15 @@ function Footer() {
         const footerConst = [{name: "Home", path:"/", component: <Home />}, {name: "About", path:"/about", component: <About />},
         {name: "Membership", path:"/membership", component: <Membership />}, {name:"Linktree", path:"/linktree", component: <Linktree />}]
         return(
-        <div className='contianer' >
+        <div className='contianer'>
             <div 
                 className="bottom" 
-                style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#343635', margin: '0'}}
+                style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#343635'}}
             >
-                <p style={{color: 'white'}}>SHPE UCF | Society of Hispanice Professional Engineers</p>
+                <p style={{color: 'white', marginLeft: '1vh'}}>SHPE UCF | Society of Hispanic Professional Engineers</p>
                 {footerConst.map((el, index) => (
                      <Link key={index} style={{textDecoration: 'none', color: 'white'}} to={el.path}>{el.name}</Link>
                 ))}
-    {/* const socialLinks = 
-    , 
-    'https://www.instagram.com/shpeucf/', 
-    'https://www.linkedin.com/company/shpe/mycompany/'] */}
                 <ThemeProvider theme={theme}>
                     <IconButton onClick={() => {window.location.href = 'https://twitter.com/shpeucfchapter'}}>
                         <TwitterIcon color='primary'></TwitterIcon>
