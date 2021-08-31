@@ -6,71 +6,52 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Footer from '../components/Footer';
 import SideList from '../components/SideList';
 import BoardPic from '../assets/Optimized-board.jpg';
-import JazM from '../assets/board/JazM.jpeg';
-import FredS from '../assets/board/FredS.png';
-import AlexD from '../assets/board/AlexD.jpeg';
-import KevinA from '../assets/board/KevinA.jpg';
-import MagdaS from '../assets/board/MagdaS.jpg';
-import NickL from '../assets/board/NickL.jpg';
-import CamD from '../assets/board/CamD.jpg';
-import HernanH from '../assets/board/HernanH.jpg';
-import BryceV from '../assets/board/BryceV.png'
-import StephC from '../assets/board/StephC.jpeg';
-
-// const ProfileCard = (person) => {
-//     return (
-//         <Card style={{margin: '1vh', width: '30vh'}}>
-//             <Typography variant='h6' style={{fontWeight: 'bold'}}>
-//                 {person.name}
-//             </Typography>
-//             <Typography>
-//                 {person.role}
-//             </Typography>
-//             <CardMedia
-//                 style={{ height: '15vh'}}
-//                 image="https://www.pbs.org/wnet/nature/files/2020/06/Nature-Thumbnails-Template-2020AS-1280x720.png"
-//             />
-//         </Card>
-//     )
-// }
+// import JazM from '../assets/board/JazM.jpeg';
+// import FredS from '../assets/board/FredS.png';
+// import AlexD from '../assets/board/AlexD.jpeg';
+// import KevinA from '../assets/board/KevinA.jpg';
+// import MagdaS from '../assets/board/MagdaS.jpg';
+// import NickL from '../assets/board/NickL.jpg';
+// import CamD from '../assets/board/CamD.jpg';
+// import HernanH from '../assets/board/HernanH.jpg';
+// import BryceV from '../assets/board/BryceV.png'
+// import StephC from '../assets/board/StephC.jpeg';
 
 const ProfileCard = (person) => {
     return (
-        <Grid item>
-            <Card>
+            <Card style={{margin: '2vh', padding: '.5vh'}}>
                 <CardMedia
                     style={{ height: "30vh", width: "23vh" }}
                     image={person.image}
                 />
-                <Typography variant="caption">
+                <Typography variant="p" style={{fontWeight: 'bold'}}>
                     {person.name}
                 </Typography>
                 <Typography variant="body2">
                     {person.role}
                 </Typography>
             </Card>
-        </Grid>
     )
 }
 
 var people = [
-    { name: 'Jazmine Manriquez', role: 'President', image: JazM },
-    { name: 'Frederick Santiago', role: 'External Vice President', image: FredS },
-    { name: 'Gabriela Medina', role: 'Internal Vice President' },
-    { name: 'Santiago Valdez', role: 'Treasurer' },
-    { name: 'Alex Diener', role: 'Secretary', image: AlexD },
-    { name: 'Kevin Abreu', role: 'Events Director', image: KevinA },
+    { name: 'Jazmine Manriquez', role: 'President', image: '' },
+    { name: 'Frederick Santiago', role: 'External Vice President', image: '' },
+    { name: 'Gabriela Medina', role: 'Internal Vice President', image: '' },
+    { name: 'Santiago Valdez', role: 'Treasurer', image: '' },
+    { name: 'Alex Diener', role: 'Secretary', image: '' },
+    { name: 'Kevin Abreu', role: 'Events Director', image: '' },
     { name: 'Juan Ariza', role: 'Membership Director' },
-    { name: 'Magdalena Sobrino-Almanzar', role: 'Marketing Director', image: MagdaS },
-    { name: 'Nick Libreros', role: 'MentorSHPE Director', image: NickL },
-    { name: 'Elena Torres', role: 'Outreach Director' },
-    { name: 'Camille Dumit', role: 'SHPEtinas Director', image: CamD },
-    { name: 'Hernan Hernandez-Garcia', role: 'Projects Director', image: HernanH },
-    { name: 'Nathalia Davila', role: 'Development Director' },
-    { name: 'Bryce Villanueva', role: 'Tech Director', image: BryceV },
-    { name: 'Sofia Montana', role: 'Tech Director' },
-    { name: 'Alexander Del Castillo', role: 'SHPE Jr Director' },
-    { name: 'Stephanie Colton', role: 'SHPE Jr Co-Director', image: StephC },
+    { name: 'Magdalena Sobrino-Almanzar', role: 'Marketing Director', image: '' },
+    { name: 'Nick Libreros', role: 'MentorSHPE Director', image: '' },
+    { name: 'Elena Torres', role: 'Outreach Director', image: '' },
+    { name: 'Camille Dumit', role: 'SHPEtinas Director', image: '' },
+    { name: 'Hernan Hernandez-Garcia', role: 'Projects Director', image: '' },
+    { name: 'Nathalia Davila', role: 'Development Director', image: '' },
+    { name: 'Bryce Villanueva', role: 'Tech Director', image: '' },
+    { name: 'Sofia Montana', role: 'Tech Director', image: '' },
+    { name: 'Alexander Del Castillo', role: 'SHPE Jr Director', image: '' },
+    { name: 'Stephanie Colton', role: 'SHPE Jr Co-Director', image: '' },
 ]
 
 function About() {
@@ -121,11 +102,9 @@ function About() {
             <div className="boardList" style={{ display: 'flex', justifyItems: 'center', flexDirection: 'column', alignItems: 'center' }}>
                 <h2>2021-2022 Board</h2>
                 <div style={{ display: 'flex', alignContent: 'center', flexFlow: 'wrap', justifyContent: 'center', }}>
-                    <Grid container spacing={4}>
-                        {people.map(person => (
-                            <ProfileCard name={person.name} role={person.role} image={person.image} />
-                        ))}
-                    </Grid>
+                    {people.map(person => (
+                        <ProfileCard name={person.name} role={person.role} image={person.image} />
+                    ))}
                 </div>
             </div>
             <Footer />
