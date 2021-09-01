@@ -15,10 +15,9 @@ function Notification({isOpen, message}) {
 
     return(
         <div>
-            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+            <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
                 <MuiAlert
                     onClose={handleClose} 
-                    severity="info"
                     variant="filled"
                     elevation={6}
                     color='warning'

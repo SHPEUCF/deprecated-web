@@ -8,6 +8,7 @@ import shpeConference from '../assets/shpeConference.png';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import Notification from '../components/Notifications';
+import './Font.css';
 
 function Home() {
     // Todo: have it so that we get this list from firebase. remove static data
@@ -29,7 +30,7 @@ function Home() {
     }];
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column'}}>
+        <div className='font' style={{ display: 'flex', flexDirection: 'column'}}>
             <div style={{display:'flex', margin: '1vh', justifyContent: 'center', alignContent: 'center', marginTop: '8vh'}}>
                 <div className="container" style={{flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                     <h2 style={{margin: '0'}}>Welcome to the SHPE UCF Website</h2>

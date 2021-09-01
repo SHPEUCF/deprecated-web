@@ -4,6 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import '../pages/Font.css';
 
 function SideList() {
     const awardsList = ['SHPE Region VII Best Chapter of the Year (2017)', 'Excellence in K-12 STEM Outreach (2015)', 'SHPE Blue Chip Award (2015)', 'Region VII SHPE – Cup Semi-Finalist (2015)',
@@ -12,9 +13,9 @@ function SideList() {
         'Region VII Leadership Training Certificate of Appreciation (2002)'];
 
     return (
-        <div >
+        <div className='font' >
             <div
-                style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignContent: 'center', width: '35vh'}}
+                style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignContent: 'center', width: '35vh', marginLeft: '1vh'}}
             >
                 <h3 >Our Mission</h3>
                 <p >

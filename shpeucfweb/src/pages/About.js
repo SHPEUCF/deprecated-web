@@ -1,62 +1,69 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Footer from '../components/Footer';
 import SideList from '../components/SideList';
 import BoardPic from '../assets/Optimized-board.jpg';
-// import JazM from '../assets/board/JazM.jpeg';
-// import FredS from '../assets/board/FredS.png';
-// import AlexD from '../assets/board/AlexD.jpeg';
-// import KevinA from '../assets/board/KevinA.jpg';
-// import MagdaS from '../assets/board/MagdaS.jpg';
-// import NickL from '../assets/board/NickL.jpg';
-// import CamD from '../assets/board/CamD.jpg';
-// import HernanH from '../assets/board/HernanH.jpg';
-// import BryceV from '../assets/board/BryceV.png'
-// import StephC from '../assets/board/StephC.jpeg';
+import JazM from '../assets/board/JazM.jpeg';
+import FredS from '../assets/board/FredS.png';
+import AlexD from '../assets/board/AlexD.jpeg';
+import KevinA from '../assets/board/KevinA.jpg';
+import MagdaS from '../assets/board/MagdaS.jpg';
+import NickL from '../assets/board/NickL.jpg';
+import CamD from '../assets/board/CamD.jpg';
+import HernanH from '../assets/board/HernanH.jpg';
+import BryceV from '../assets/board/BryceV.png'
+import StephC from '../assets/board/StephC.jpeg';
+import ElenaT from '../assets/board/ElenaT.jpg';
+import GabiM from '../assets/board/GabiM.jpeg';
+import NatD from '../assets/board/NatD.jpg';
+import SantiV from '../assets/board/SantiV.jpeg';
+import SofiaM from '../assets/board/SofiaM.jpeg';
+import JuanA from '../assets/board/JuanA.jpg';
+import cat from '../assets/board/cat.jpg';
+import './Font.css';
 
 const ProfileCard = (person) => {
     return (
-            <Card style={{margin: '2vh', padding: '.5vh'}}>
-                <CardMedia
-                    style={{ height: "30vh", width: "23vh" }}
-                    image={person.image}
-                />
-                <Typography variant="p" style={{fontWeight: 'bold'}}>
-                    {person.name}
-                </Typography>
-                <Typography variant="body2">
-                    {person.role}
-                </Typography>
-            </Card>
-    )
-}
+        <Card style={{margin: '2vh', padding: '.5vh'}}>
+            <CardMedia
+                style={{ height: '30vh', width: '23vh' }}
+                image={person.image}
+            />
+            <Typography variant='p' style={{fontWeight: 'bold'}}>
+                {person.name}
+            </Typography>
+            <Typography variant='body2'>
+                {person.role}
+            </Typography>
+        </Card>
+    );
+};
 
 var people = [
-    { name: 'Jazmine Manriquez', role: 'President', image: '' },
-    { name: 'Frederick Santiago', role: 'External Vice President', image: '' },
-    { name: 'Gabriela Medina', role: 'Internal Vice President', image: '' },
-    { name: 'Santiago Valdez', role: 'Treasurer', image: '' },
-    { name: 'Alex Diener', role: 'Secretary', image: '' },
-    { name: 'Kevin Abreu', role: 'Events Director', image: '' },
-    { name: 'Juan Ariza', role: 'Membership Director' },
-    { name: 'Magdalena Sobrino-Almanzar', role: 'Marketing Director', image: '' },
-    { name: 'Nick Libreros', role: 'MentorSHPE Director', image: '' },
-    { name: 'Elena Torres', role: 'Outreach Director', image: '' },
-    { name: 'Camille Dumit', role: 'SHPEtinas Director', image: '' },
-    { name: 'Hernan Hernandez-Garcia', role: 'Projects Director', image: '' },
-    { name: 'Nathalia Davila', role: 'Development Director', image: '' },
-    { name: 'Bryce Villanueva', role: 'Tech Director', image: '' },
-    { name: 'Sofia Montana', role: 'Tech Director', image: '' },
-    { name: 'Alexander Del Castillo', role: 'SHPE Jr Director', image: '' },
-    { name: 'Stephanie Colton', role: 'SHPE Jr Co-Director', image: '' },
+    { name: 'Jazmine Manriquez', role: 'President', image: JazM },
+    { name: 'Frederick Santiago', role: 'External Vice President', image: FredS },
+    { name: 'Gabriela Medina', role: 'Internal Vice President', image: GabiM },
+    { name: 'Santiago Valdez', role: 'Treasurer', image: SantiV },
+    { name: 'Alex Diener', role: 'Secretary', image: AlexD },
+    { name: 'Kevin Abreu', role: 'Events Director', image: KevinA },
+    { name: 'Juan Ariza', role: 'Membership Director', image: JuanA },
+    { name: 'Magdalena Sobrino-Almanzar', role: 'Marketing Director', image: MagdaS },
+    { name: 'Nick Libreros', role: 'MentorSHPE Director', image: NickL },
+    { name: 'Elena Torres', role: 'Outreach Director', image: ElenaT },
+    { name: 'Camille Dumit', role: 'SHPEtinas Director', image: CamD },
+    { name: 'Hernan Hernandez-Garcia', role: 'Projects Director', image: HernanH },
+    { name: 'Nathalia Davila', role: 'Development Director', image: NatD },
+    { name: 'Bryce Villanueva', role: 'Tech Director', image: BryceV },
+    { name: 'Sofia Montana', role: 'Tech Director', image: SofiaM },
+    { name: 'Alexander Del Castillo', role: 'SHPE Jr Director', image: cat },
+    { name: 'Stephanie Colton', role: 'SHPE Jr Co-Director', image: StephC },
 ]
 
 function About() {
     return (
-        <div style={{ marginTop: '8vh' }}>
+        <div className='font' style={{ marginTop: '8vh', fontFamily: '' }}>
             <div
                 className="description"
                 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '1vh' }}
