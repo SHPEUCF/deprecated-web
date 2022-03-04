@@ -4,13 +4,15 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Membership from '../pages/Membership';
 import Linktree from '../pages/Linktree';
+import Alumni from "../pages/Alumni";
 import AppBar from '@material-ui/core/AppBar';
 import './Nav.css';
 import logo from '../assets/shpeLogo.png';
 
 function Nav() {
     const routes = [{name: "Home", path:"/", component: <Home />}, {name: "About", path:"/about", component: <About />},
-        {name: "Membership", path:"/membership", component: <Membership />}, {name:"Linktree", path:"/linktree", component: <Linktree />}]
+        {name: "Membership", path:"/membership", component: <Membership />}, {name:"Linktree", path:"/linktree", component: <Linktree />},
+        {name:"Alumni", path:"/alumni", component: <Alumni />}]
     
         return(
         <div className='contianer'>
