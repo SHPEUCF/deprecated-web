@@ -9,6 +9,7 @@ import { BrowserRouter as
   import Membership from './pages/Membership';
   import Linktree from './pages/Linktree';
   import Nav from './components/Nav';
+  import Techpage from './pages/Techpage';
 
 const App = () => {
   return (
@@ -29,6 +30,9 @@ const App = () => {
         </Route>
         <Route path="/linktree">
             <Linktree />
+        </Route>
+        <Route path="/techpage">
+            <Techpage />
         </Route>
       </Switch>
     </Router>
