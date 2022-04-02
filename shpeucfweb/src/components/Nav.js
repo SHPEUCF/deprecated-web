@@ -7,10 +7,11 @@ import Linktree from '../pages/Linktree';
 import AppBar from '@material-ui/core/AppBar';
 import './Nav.css';
 import logo from '../assets/shpeLogo.png';
+import Techpage from '../pages/Techpage';
 
 function Nav() {
     const routes = [{name: "Home", path:"/", component: <Home />}, {name: "About", path:"/about", component: <About />},
-        {name: "Membership", path:"/membership", component: <Membership />}, {name:"Linktree", path:"/linktree", component: <Linktree />}]
+        {name: "Membership", path:"/membership", component: <Membership />}, {name:"Linktree", path:"/linktree", component: <Linktree />},{name: "Techpage", path:"/techpage", component: <Techpage />}]
     
         return(
         <div className='contianer'>
