@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import Notification from '../components/Notifications';
 import './Font.css';
+import BasicModal from '../components/Modal.js';
 
 function Home() {
     // Todo: have it so that we get this list from firebase. remove static data
@@ -28,6 +29,14 @@ function Home() {
         imgUrl: shpeConference,
         url: 'https://www.shpe.org/events/nc2021'
     }];
+
+    
+    function BasicModal() {
+        const [open, setOpen] = React.useState(false);
+        const handleOpen = () => setOpen(true);
+        const handleClose = () => setOpen(false);
+     }
+      
 
     return (
         <div className='font' style={{ display: 'flex', flexDirection: 'column'}}>
@@ -63,6 +72,7 @@ function Home() {
                     Make sure to come with us to these conferences.
                 </p>
                 {/* cards displaying conference information goes here */}
+                
                 {/* possibly break up this part here and make this into a separate component */}
                 <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
                     {conferences.map((conference, index) => (
@@ -81,7 +91,9 @@ function Home() {
                                     <p>Location: {conference.location}</p>
                                     <p>Date: {conference.date}</p>
                                 </CardContent>
+                               <BasicModal img={conference.imgUrl} text="hello"></BasicModal>
                             </Card>
+                           
                             
                         </Grid>
                     ))}
