@@ -19,7 +19,8 @@ function Home() {
         date: 'October, 11 - 22, 2021',
         info: 'The nation’s most prestigious stage for honoring excellence, building and reinforcing networks, the HENAAC Conference is the place where top executives, innovative professionals, and the brightest STEM students convene. As a non‐membership organization, GMiS draws thousands of diverse high caliber STEM students, from a broad array of institutions, including top‐ranked U.S. News & World Report institutions, Research I Institutions, Minority‐Serving Institutions, and 2‐year colleges.',
         imgUrl: henaac,
-        url: 'https://www.gmisconference.org/'
+        url: 'https://www.gmisconference.org/',
+        description:""
     }, 
     {
         name: 'SHPE National Convention 2021',
@@ -91,7 +92,7 @@ function Home() {
                                     <p>Location: {conference.location}</p>
                                     <p>Date: {conference.date}</p>
                                 </CardContent>
-                               <BasicModal img={conference.imgUrl} text="hello"></BasicModal>
+                               <BasicModal img={conference.imgUrl} text={conference.name} description={conference.description} url={conference.url}></BasicModal>
                             </Card>
                            
                             
