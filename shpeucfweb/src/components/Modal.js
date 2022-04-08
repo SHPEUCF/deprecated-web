@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { IoClose } from 'react-icons/io5';
+
 
 const style = {
   position: 'absolute',
@@ -16,15 +18,19 @@ const style = {
   p: 4,
 };
 
+
+
 function BasicModal(props) {
-  const {text,img}=props;
+  const {text,img,url,description}=props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+ 
+
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpen} sx={{ mx: "auto", width: 300, textAlign: "center",}}>Learn More</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -32,14 +38,16 @@ function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-           <img src={img} alt={text}></img>
+          <Button onClick={handleClose} sx={{ marginLeft:"350px", textAlign: "center",}}> <IoClose /></Button>
+           <img src={img} alt={text}></img> 
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {text}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            {description}
           </Typography>
-          <a target="_blank" href="https://greatmindsinstem.org/henaac-awards/"><Button>Click me</Button></a>
+          <a target="_blank" href={url}><Button sx={{ mx: "auto", width: 400, textAlign: "center",}}>Click me</Button></a>
+          
         </Box>
       </Modal>
     </div>
