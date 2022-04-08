@@ -9,6 +9,12 @@ import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import Notification from '../components/Notifications';
 import './Font.css';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import BasicModal from '../components/Modal';
+
 
 function Home() {
     // Todo: have it so that we get this list from firebase. remove static data
@@ -18,7 +24,8 @@ function Home() {
         date: 'October, 11 - 22, 2021',
         info: 'The nation’s most prestigious stage for honoring excellence, building and reinforcing networks, the HENAAC Conference is the place where top executives, innovative professionals, and the brightest STEM students convene. As a non‐membership organization, GMiS draws thousands of diverse high caliber STEM students, from a broad array of institutions, including top‐ranked U.S. News & World Report institutions, Research I Institutions, Minority‐Serving Institutions, and 2‐year colleges.',
         imgUrl: henaac,
-        url: 'https://www.gmisconference.org/'
+        url: 'https://www.gmisconference.org/',
+        description: 'Be a national leader in keeping America technologically strong by promoting Science, Technology, Engineering and Math careers especially in underserved communities'
     }, 
     {
         name: 'SHPE National Convention 2021',
@@ -26,8 +33,10 @@ function Home() {
         date: 'November, 10 - 14, 2021',
         info: 'Each year, the SHPE Convention attracts over 5,000 engineering professionals, students and corporate representatives. The convention is an opportunity for engineering companies and corporations to recruit top talent from SHPE membership. It also provides educational, technical and career opportunities for professional and student engineers. SHPE UCF will be hosting workshops throughout the fall semester to prepare you for the SHPE National Convention. Please stay tuned to our website, our Facebook page, and our Twitter page for the specific date and location of these workshops.',
         imgUrl: shpeConference,
-        url: 'https://www.shpe.org/events/nc2021'
+        url: 'https://www.shpe.org/events/nc2021',
+        description: 'SHPE changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development.'
     }];
+     
 
     return (
         <div className='font' style={{ display: 'flex', flexDirection: 'column'}}>
@@ -63,6 +72,7 @@ function Home() {
                     Make sure to come with us to these conferences.
                 </p>
                 {/* cards displaying conference information goes here */}
+                
                 {/* possibly break up this part here and make this into a separate component */}
                 <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
                     {conferences.map((conference, index) => (
@@ -81,7 +91,9 @@ function Home() {
                                     <p>Location: {conference.location}</p>
                                     <p>Date: {conference.date}</p>
                                 </CardContent>
+                               <BasicModal img={conference.imgUrl} text={conference.name} url={conference.url} description={conference.description}></BasicModal>
                             </Card>
+                           
                             
                         </Grid>
                     ))}
