@@ -13,20 +13,20 @@ import './Font.css';
 function Home() {
     // Todo: have it so that we get this list from firebase. remove static data
     const conferences = [{
-        name: 'Henaac Conference 2021',
-        location: 'Orlando, Florida',
-        date: 'October, 11 - 22, 2021',
+        name: 'Pasadena Conference 2022',
+        location: 'Pasadena, California',
+        date: 'October, 5 - 8, 2022',
         info: 'The nation’s most prestigious stage for honoring excellence, building and reinforcing networks, the HENAAC Conference is the place where top executives, innovative professionals, and the brightest STEM students convene. As a non‐membership organization, GMiS draws thousands of diverse high caliber STEM students, from a broad array of institutions, including top‐ranked U.S. News & World Report institutions, Research I Institutions, Minority‐Serving Institutions, and 2‐year colleges.',
         imgUrl: henaac,
         url: 'https://www.gmisconference.org/'
     }, 
     {
-        name: 'SHPE National Convention 2021',
-        location: 'Orlando, Florida',
-        date: 'November, 10 - 14, 2021',
+        name: 'SHPE National Convention 2022',
+        location: 'Charlotte, North Carolina',
+        date: 'November, 2 - 6, 2022',
         info: 'Each year, the SHPE Convention attracts over 5,000 engineering professionals, students and corporate representatives. The convention is an opportunity for engineering companies and corporations to recruit top talent from SHPE membership. It also provides educational, technical and career opportunities for professional and student engineers. SHPE UCF will be hosting workshops throughout the fall semester to prepare you for the SHPE National Convention. Please stay tuned to our website, our Facebook page, and our Twitter page for the specific date and location of these workshops.',
         imgUrl: shpeConference,
-        url: 'https://www.shpe.org/events/nc2021'
+        url: 'https://2022.shpe.org/'
     }];
 
     return (

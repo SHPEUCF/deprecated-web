@@ -5,24 +5,22 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Footer from '../components/Footer';
 import SideList from '../components/SideList';
 import BoardPic from '../assets/Optimized-board.jpg';
-import JazM from '../assets/board/JazM.jpeg';
-import FredS from '../assets/board/FredS.png';
-import AlexD from '../assets/board/AlexD.jpeg';
-import KevinA from '../assets/board/KevinA.jpg';
-import MagdaS from '../assets/board/MagdaS.jpg';
-import NickL from '../assets/board/NickL.jpg';
-import CamD from '../assets/board/CamD.jpg';
-import HernanH from '../assets/board/HernanH.jpg';
-import BryceV from '../assets/board/BryceV.png'
-import StephC from '../assets/board/StephC.jpeg';
-import ElenaT from '../assets/board/ElenaT.jpg';
-import GabiM from '../assets/board/GabiM.jpeg';
-import NatD from '../assets/board/NatD.jpg';
-import SantiV from '../assets/board/SantiV.jpeg';
-import SofiaM from '../assets/board/SofiaM.jpeg';
-import JuanA from '../assets/board/JuanA.jpg';
-import cat from '../assets/board/cat.jpg';
+import AlanL from '../assets/board/AlanL.png';
+import AndresA from '../assets/board/AndresA.png';
+import BrendanN from '../assets/board/BrendanN.png';
+import CecilleC from '../assets/board/CecilleC.png';
+import ElenaT from '../assets/board/ElenaT.png';
+import NickL from '../assets/board/NickL.png';
+import GabrielaM from '../assets/board/GabrielaM.png';
+import JoseV from '../assets/board/JoseV.png';
+import RichardH from '../assets/board/RichardH.png';
+import StephC from '../assets/board/StephC.png';
+import ValentinaM from '../assets/board/ValentinaM.png';
+import ZainYF from '../assets/board/ZainYF.png';
+import AnneR from '../assets/board/AnneR.png';
 import './Font.css';
+
+
 
 const ProfileCard = (person) => {
     return (
@@ -35,31 +33,27 @@ const ProfileCard = (person) => {
                 {person.name}
             </Typography>
             <Typography variant='body2'>
-                {person.role}
+                { person.role }
             </Typography>
         </Card>
     );
 };
 
 var people = [
-    { name: 'Jazmine Manriquez', role: 'President', image: JazM },
-    { name: 'Frederick Santiago', role: 'External Vice President', image: FredS },
-    { name: 'Gabriela Medina', role: 'Internal Vice President', image: GabiM },
-    { name: 'Santiago Valdez', role: 'Treasurer', image: SantiV },
-    { name: 'Alex Diener', role: 'Secretary', image: AlexD },
-    { name: 'Kevin Abreu', role: 'Events Director', image: KevinA },
-    { name: 'Juan Ariza', role: 'Membership Director', image: JuanA },
-    { name: 'Magdalena Sobrino-Almanzar', role: 'Marketing Director', image: MagdaS },
-    { name: 'Nick Libreros', role: 'MentorSHPE Director', image: NickL },
-    { name: 'Elena Torres', role: 'Outreach Director', image: ElenaT },
-    { name: 'Camille Dumit', role: 'SHPEtinas Director', image: CamD },
-    { name: 'Hernan Hernandez-Garcia', role: 'Projects Director', image: HernanH },
-    { name: 'Nathalia Davila', role: 'Development Director', image: NatD },
-    { name: 'Bryce Villanueva', role: 'Tech Director', image: BryceV },
-    { name: 'Sofia Montana', role: 'Tech Director', image: SofiaM },
-    { name: 'Alexander Del Castillo', role: 'SHPE Jr Director', image: cat },
-    { name: 'Stephanie Colton', role: 'SHPE Jr Co-Director', image: StephC },
-]
+    { name: 'Nick Libreros', role: 'President', image: NickL },
+    { name: 'Andres Acevedo', role: 'Vice President', image: AndresA },
+    { name: 'Steph Colton', role: 'Secretary', image: StephC },
+    { name: 'Cecille Castro', role: 'Treasurer', image: CecilleC },
+    { name: 'Alan Luko', role: 'Corporate Affairs Co-Chair', image: AlanL },
+    { name: 'Elena Torres', role: 'Corporate Affairs Co-Chair', image: ElenaT },
+    { name: 'Gabriela Medina', role: 'Pro Dev Co-Chair', image: GabrielaM },
+    { name: 'Richard Hudson', role: 'Pro Dev Co-Chair', image: RichardH },
+    { name: 'Valentina Medina', role: 'Marketing Chair', image: ValentinaM },
+    { name: 'Anne Reed', role: 'External Chair', image: AnneR },
+    { name: 'Jose Viera', role: 'Events Chair', image: JoseV },
+    { name: 'Brendan Nocca', role: 'Projects Chair', image: BrendanN },
+    { name: 'Zain Yousaf Fuentes', role: 'Tech Chair', image: ZainYF }
+];
 
 function About() {
     return (
@@ -107,7 +101,7 @@ function About() {
                 <SideList />
             </div>
             <div className="boardList" style={{ display: 'flex', justifyItems: 'center', flexDirection: 'column', alignItems: 'center' }}>
-                <h2>2021-2022 Board</h2>
+                <h2>2022-2023 Board</h2>
                 <div style={{ display: 'flex', alignContent: 'center', flexFlow: 'wrap', justifyContent: 'center', }}>
                     {people.map(person => (
                         <ProfileCard name={person.name} role={person.role} image={person.image} />
